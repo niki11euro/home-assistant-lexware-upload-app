@@ -6,6 +6,6 @@ frozenlist==1.8.0
 multidict==6.9.1
 propcache==0.5.2
 yarl==1.24.2
-idna==3.17
+idna==3.20
 Pillow==12.3.0
 typing_extensions==4.16.0
