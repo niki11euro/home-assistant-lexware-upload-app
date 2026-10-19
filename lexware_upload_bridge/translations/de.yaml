@@ -1,0 +1,73 @@
+configuration:
+  scan_enabled:
+    name: Scannen freigeben
+    description: Erlaubt einen ausdrücklich über die Oberfläche gestarteten Scan.
+  upload_enabled:
+    name: Lexware-Upload freigeben
+    description: Erlaubt das Hochladen der gescannten Belegdatei. Erst nach vollständiger
+      Einrichtung einschalten.
+  scanserv_url:
+    name: Interne Scanserver-Adresse
+  scanner_device_id:
+    name: Exakte Scannerkennung
+  scan_resolution:
+    name: Scanaufloesung in dpi
+    description: 75, 100, 200, 300, 600 oder 1200 dpi. Der Scanner muss die gewaehlte
+      Aufloesung anbieten.
+  scan_mode:
+    name: Scanmodus
+    description: Color fuer Farbe, Gray fuer Graustufen oder Lineart fuer Schwarz-Weiss.
+  scan_format:
+    name: Dateiformat
+    description: JPG verwendet das Profil mit hoher Qualitaet. PNG ist verlustfrei.
+      Eine einzelne Flachbettseite ohne Filter.
+  scan_paper_size:
+    name: Scanbereich
+    description: A4, A5 oder A6 im Hochformat. Full verwendet die vom Scanner angebotene
+      volle Flaeche.
+  scan_brightness:
+    name: Helligkeit
+    description: 0 bis 2000. 1000 ist der neutrale Wert. Nur angewendet, wenn der
+      Scanner diese Einstellung aktiv anbietet.
+  scan_contrast:
+    name: Kontrast
+    description: 0 bis 2000. 1000 ist der neutrale Wert. Nur angewendet, wenn der
+      Scanner diese Einstellung aktiv anbietet. Im Modus Lineart wird Kontrast von
+      scanservjs nicht angewendet.
+  upload_backend:
+    name: Lexware-Verbindung
+    description: 'api: direkt zu Lexware, ohne MCP oder Tunnel. mcp: bisherige interne
+      Verbindung als Rueckweg. Kein automatischer Wechsel.'
+  lexware_api_key:
+    name: Lexware-API-Schluessel
+    description: Nur fuer api. Geschuetzt in den App-Einstellungen speichern. Der
+      Upload bleibt auf Belegdateien beschraenkt; die VPS-ChatGPT-Rechteschalter gelten
+      hier nicht.
+  mcp_url:
+    name: Interner Lexware-MCP-Endpunkt
+  mcp_token:
+    name: Lokaler MCP-Zugangstoken
+    description: Kein Lexware-API-Schluessel. Nicht in Git oder Chat-Dokumentation
+      speichern.
+  api_token:
+    name: Optionaler API-Zugangstoken
+    description: Fuer Ingress nicht erforderlich. Mindestens 32 zufaellige Zeichen
+      fuer spaetere lokale Automatisierungen.
+  archive_subdirectory:
+    name: Archivordner unter share
+    description: Muss unter WE.R liegen. Standard WE.R/Lexware Upload.
+  max_upload_bytes:
+    name: Maximale Uploadgroesse in Byte
+  scan_timeout_seconds:
+    name: Scanzeitlimit in Sekunden
+  mcp_timeout_seconds:
+    name: MCP-Zeitlimit in Sekunden
+    description: Nur fuer die bisherige MCP-Verbindung. Direkte API-Uploads haben
+      ein festes Zeitlimit von 180 Sekunden.
+  min_free_mb:
+    name: Freie Speicherreserve in MB
+  import_archive_history:
+    name: Vorhandenen Belegverlauf einmalig übernehmen
+    description: 'Nur beim Umzug einer bestehenden Installation: beide Freigaben ausschalten
+      und eine leere App-Datenbank verwenden. Bestätigte Belege werden nach Prüfung
+      übernommen, ohne neue Uploads. Anschließend diesen Schalter wieder ausschalten.'

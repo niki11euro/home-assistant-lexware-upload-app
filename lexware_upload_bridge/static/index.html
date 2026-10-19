@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WE.R Lexware Upload</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><h1>WE.R Lexware Upload</h1><p id="status" class="badge" role="status" aria-live="polite" aria-atomic="true">Verbindung wird hergestellt</p></header>
+<section class="scan-card" aria-label="Beleg scannen">
+<p id="profile" class="profile">Scanprofil wird geladen.</p>
+<button id="scan" type="button" disabled>Scannen und Hochladen</button>
+<p class="hint">WE.R-Beleg auflegen. Original und Uploadkopie werden gespeichert.</p>
+<div id="progress" class="progress" hidden>
+<p id="progress-label" aria-live="polite" aria-atomic="true">Auftrag startet</p>
+<div id="progress-bar" class="progress-track" role="progressbar" aria-label="Auftragsfortschritt"><span></span></div>
+<ol class="steps" aria-label="Arbeitsschritte"><li id="step-scan">Scan</li><li id="step-archive">Sichern</li><li id="step-upload">Hochladen</li></ol>
+</div>
+<p id="message" class="message" role="status" aria-live="polite" aria-atomic="true"></p>
+</section>
+<section class="history" aria-labelledby="history-title"><h2 id="history-title">Letzte Belege</h2><div id="jobs"></div></section>
+</main><script src="app.js"></script>
+</body></html>

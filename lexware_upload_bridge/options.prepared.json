@@ -1,0 +1,23 @@
+{
+  "scan_enabled": false,
+  "upload_enabled": false,
+  "scanserv_url": "http://scanserver:8080",
+  "scanner_device_id": "example-scanner-id",
+  "scan_resolution": "300",
+  "scan_mode": "Lineart",
+  "scan_format": "JPG",
+  "scan_paper_size": "A4",
+  "scan_brightness": 1000,
+  "scan_contrast": 1000,
+  "upload_backend": "api",
+  "lexware_api_key": "",
+  "mcp_url": "http://lexware-mcp:8080/mcp",
+  "mcp_token": "",
+  "api_token": "",
+  "archive_subdirectory": "WE.R/Lexware Upload",
+  "max_upload_bytes": 4800000,
+  "scan_timeout_seconds": 900,
+  "mcp_timeout_seconds": 180,
+  "min_free_mb": 512,
+  "import_archive_history": false
+}
